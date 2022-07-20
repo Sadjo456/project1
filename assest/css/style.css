@@ -1,0 +1,12 @@
+footer{
+    position: fixed;
+    bottom: 0;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.float-right{
+    float: right
+}
