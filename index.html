@@ -19,13 +19,31 @@
           <h1 class="top-element">Shopping Site</h1>
         </div>
         <div class="cart level-right">
-          <a href="/" class="top-element">Cart</a>
+          <button>
+            <svg
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              height="2em"
+              width="2em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M6 9h13.938l.5-2H8V5h13.72a1 1 0 0 1 .97 1.243l-2.5 10a1 1 0 0 1-.97.757H5a1 1 0 0 1-1-1V4H2V2h3a1 1 0 0 1 1 1v6zm0 14a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm12 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                ></path>
+              </g>
+            </svg>
+          </button>
         </div>
       </nav>
       <ul>
-        <li class="mens category level-item" id="mens">Men's</li>
-        <li class="womens category level-item" id="womens">Women's</li>
-        <li class="home category level-item" id="home">Home</li>
+        <li class="category level-item" data-id="men's clothing">Men's</li>
+        <li class="category level-item" data-id="women's clothing">Women's</li>
+        <li class="category level-item" data-id="jewelery">JEWELERY</li>
+        <li class="category level-item" data-id="electronics">ELECTRONICS</li>
       </ul>
 
       <section class="product-container container">

@@ -4,21 +4,20 @@ var productEl = document.querySelector("#prod-elem");
 var categories = document.querySelectorAll(".category");
 var productCardEl = document.querySelector("#product-card");
 
-function testing() {
-  categories.forEach((category) => {
-    var catAttri = category.getAttribute("data-id");
+categories.forEach((category) => {
+  var catAttri = category.getAttribute("data-id");
 
-    category.addEventListener("click", (event) => {
-      event.preventDefault();
-      var categoryUrl =
-        "https://fakestoreapi.com/products/category/" + catAttri;
-      //getProduct(categoryUrl);
-      console.log(categoryUrl);
-    });
+  category.addEventListener("click", (event) => {
+    event.preventDefault();
+    var categoryUrl = "https://fakestoreapi.com/products/category/" + catAttri;
+    getProduct(categoryUrl);
+    console.log(categoryUrl);
   });
-}
+});
 
-function getProduct() {
+// categories - men's clothing, jewelery, electronics, women's clothing
+
+function getProduct(fakeStoreUrl) {
   productEl.innerHTML = "";
   fetch(fakeStoreUrl).then(function (response) {
     response.json().then(function (data) {
@@ -35,6 +34,7 @@ function getProduct() {
         var cardImage = document.createElement("img");
         var cardName = document.createElement("h5");
         var cardPrice = document.createElement("h5");
+        var cardCart = document.createElement("button");
 
         //append card to container
         cardSection.setAttribute("class", "card column is-3");
@@ -50,12 +50,16 @@ function getProduct() {
         cardPrice.setAttribute("class", "card-content column");
         cardSection.append(cardPrice);
 
+        cardCart.setAttribute("class", "card-content column");
+        cardSection.append(cardCart);
+
         cardImage.innerHTML = productImage;
         cardName.innerHTML = productName;
         cardPrice.innerHTML = "$" + productPrice;
+        cardCart.innerHTML = "Add to Cart";
       });
     });
   });
 }
 
-getProduct();
+getProduct(fakeStoreUrl);
