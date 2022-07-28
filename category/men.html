@@ -4,19 +4,24 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>JoyShop</title>
-        <link rel="stylesheet" href="assest/css/new-style.css" />
-        <link rel="stylesheet" href="assest/css/normalize.css" />
+        <link rel="stylesheet" href="/assest/css/mine.css" />
+        <link rel="stylesheet" href="/assest/css/header-footer.css" />
+        <link rel="stylesheet" href="/assest/css/normalize.css" />
+        <title>Document</title>
+        <script type="module" defer>
+            import * as setup from "/assest/js/category-setup.js";
+            setup.fakeStoreUrl.category("men's clothing").then((data) => data.forEach(setup.addProduct));
+        </script>
     </head>
     <body>
         <header>
             <div class="nav-wrapper">
-                <a href="./new.html"><img src="./assest/images/logo.png" alt="JoyShop" /></a>
+                <a href="/index.html"><img src="/assest/images/logo.png" alt="JoyShop" /></a>
                 <ul>
-                    <li><a href="/">Woman</a></li>
-                    <li><a href="/">Men</a></li>
-                    <li><a href="/">Jewelery</a></li>
-                    <li><a href="/">Electronics</a></li>
+                    <li><a href="/category/woman.html">Woman</a></li>
+                    <li><a href="/category/men.html">Men</a></li>
+                    <li><a href="/category/jewelery.html">Jewelery</a></li>
+                    <li><a href="/category/electronics.html">Electronics</a></li>
                 </ul>
                 <div>
                     <div class="search-wrapper">
@@ -47,29 +52,7 @@
             </div>
         </header>
         <main>
-            <div class="promo"><p>Get 15% off on your first Purshase</p></div>
-            <section class="hero">
-                <div>
-                    <h2>Welcome to JoyShop</h2>
-                    <h3>EnJoy our Amazing design and technology</h3>
-                    <div class="button-wrapper">
-                        <button type="button">Women</button>
-                        <button type="button">Men</button>
-                        <button type="button">Jewelery</button>
-                        <button type="button">Technology</button>
-                    </div>
-                </div>
-            </section>
-            <section class="offers">
-                <div class="delivery-offer">
-                    <h3>Premium Delivery</h3>
-                    <p>Unlimited Next-Day Delivery for $9.99 per year</p>
-                </div>
-                <div class="student-offer">
-                    <h3>STUDENTS GET 10% OFF</h3>
-                    <p>GET YOUR CODE</p>
-                </div>
-            </section>
+            <div class="product-container"></div>
         </main>
         <footer>
             <section>
