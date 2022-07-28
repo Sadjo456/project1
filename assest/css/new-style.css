@@ -8,6 +8,9 @@ header {
   position: sticky;
   background-color: #484a4d;
 }
+header img {
+  width: 100px;
+}
 header .nav-wrapper {
   display: flex;
   justify-content: space-around;
