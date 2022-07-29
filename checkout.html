@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="./assest/css/style.css" />
+    <link rel="index" href="index.html"/>
+</head>
+<body>
+    <section class=checkout-page> Checkout Page
+    <div class=purchase-info id=order-summary>
+        <p>Order Summary</p>
+        <div id="order-images"></div>
+    </div>
+    <div class=purchase-info id=purchase-info>
+        <p>Shipping Method</p>
+        <div class="shipping-method">
+          <button id="express" onclick="logShipping('Express');"> Express (2-3 days)</button>
+           <button id="standard" onclick="logShipping('Standard');">Standard (5-10 days)</button>
+        </div>
+    </div>
+    <div class=purchase-info id=purchase-info>
+        <p>Payment Method</p>
+        <button class="payment">USD</button>
+        <button class="payment">EUR</button>
+        <button class="payment">AUD</button>
+    </div>
+    <div class="checkout">Cart total: <span id="total-cost"></span></div>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="./assest/js/checkout.js"></script>
+<!-- <script>
+    var cartTotal = 99.99;
+    var currency = "USD";
+    let e = document.getElementById("total-cost");
+    e.innerHTML = cartTotal + " " + currency;
+    </script> -->
+</body>
+</html>
