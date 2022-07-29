@@ -1,1 +1,2 @@
-# project1
+# Group 4 - Joyshop
+
