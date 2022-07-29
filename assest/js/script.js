@@ -57,9 +57,25 @@ function getProduct(fakeStoreUrl) {
         cardName.innerHTML = productName;
         cardPrice.innerHTML = "$" + productPrice;
         cardCart.innerHTML = "Add to Cart";
+
+        cardCart.addEventListener("click",()=>{
+          addToCart({
+            price:productPrice,
+            name:productName,
+            image:productImage
+          })
+        } )
+
       });
     });
   });
 }
+
+function addToCart(data){
+  const cart = JSON.parse(localStorage.getItem("cart") || "[]")
+  cart.push(data)
+  localStorage.setItem("cart",JSON.stringify(cart))
+}
+
 
 getProduct(fakeStoreUrl);
