@@ -10,7 +10,9 @@
         <title>Document</title>
         <script type="module" defer>
             import * as setup from "../assest/js/category-setup.js";
-            setup.fakeStoreUrl.category("men's clothing").then((data) => data.forEach(setup.addProduct));
+            setup.fakeStoreUrl.category("men's clothing").then((data) => data.forEach(setup.addProduct)).then(()=>{
+                    setup.quickbuyBtns()
+                });
         </script>
     </head>
     <body>
